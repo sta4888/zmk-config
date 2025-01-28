@@ -86,6 +86,7 @@
             >;
 
             sensor-bindings = <&scroll_encoder>;
+            label = "layer2";
         };
 
         layer_3 {
