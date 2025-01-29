@@ -80,9 +80,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '`', s: '~'}
-  - $$mdi:mouse-left-click-outline$$
-  - $$mdi:mouse-scroll-wheel$$
-  - $$mdi:mouse-right-click-outline$$
+  - RGB COLOR HSB(0,100,50)
+  - RGB COLOR HSB(110,100,50)
+  - RGB COLOR HSB(211,100,50)
   - '&mkp MB4'
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - PG UP
@@ -91,11 +91,11 @@ layers:
   - HOME
   - {t: '-', s: _}
   - {t: '=', s: +}
-  - RGB COLOR HSB(119,100,50)
+  - {t: '$$mdi:transfer$$', type: trans}
   - '~'
-  - RGB COLOR HSB(243,100,50)
-  - RGB COLOR HSB(0,100,50)
-  - RGB COLOR HSB(0,0,100)
+  - $$mdi:mouse-left-click-outline$$
+  - '&mkp MB3'
+  - '&mkp MB2'
   - '&mkp MB5'
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - PG DN
@@ -145,9 +145,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:skip-previous$$
-  - PLAY PAUSE
-  - $$mdi:skip-next$$
+  - OUT BLE
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:bluetooth-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -158,9 +158,9 @@ layers:
   - +
   - {t: '$$mdi:transfer$$', type: trans}
   - OUT USB
-  - OUT BLE
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:skip-previous$$
+  - PLAY PAUSE
+  - $$mdi:skip-next$$
   - BT CLR ALL
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -197,3 +197,9 @@ layers:
 combos:
 - p: [24, 25]
   k: PRINTSCREEN
+- p: [31, 30]
+  k: $$mdi:arrow-right-bold$$
+- p: [20, 21]
+  k: PG UP
+- p: [33, 34]
+  k: PG DN
