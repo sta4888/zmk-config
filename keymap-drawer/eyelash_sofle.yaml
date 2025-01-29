@@ -197,9 +197,3 @@ layers:
 combos:
 - p: [24, 25]
   k: PRINTSCREEN
-- p: [31, 30]
-  k: $$mdi:arrow-right-bold$$
-- p: [20, 21]
-  k: PG UP
-- p: [33, 34]
-  k: PG DN

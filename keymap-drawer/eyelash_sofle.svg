@@ -636,22 +636,6 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="854" y="99" width="28" height="26" class="combo"/>
 <text x="868" y="112" class="combo tap"><tspan style="font-size: 60%">PRINTSCRE…</tspan></text>
 </g>
-<g class="combo combopos-1">
-<rect rx="6" ry="6" x="266" y="134" width="28" height="26" class="combo"/>
-<use href="#mdi:arrow-right-bold" xlink:href="#mdi:arrow-right-bold" x="271" y="138" height="18" width="18.0" class="combo tap glyph mdi:arrow-right-bold"/>
-</g>
-<g class="combo combopos-2">
-<rect rx="6" ry="6" x="630" y="78" width="28" height="26" class="combo"/>
-<text x="644" y="91" class="combo tap">
-<tspan x="644" dy="-0.6em">PG</tspan><tspan x="644" dy="1.2em">UP</tspan>
-</text>
-</g>
-<g class="combo combopos-3">
-<rect rx="6" ry="6" x="630" y="134" width="28" height="26" class="combo"/>
-<text x="644" y="147" class="combo tap">
-<tspan x="644" dy="-0.6em">PG</tspan><tspan x="644" dy="1.2em">DN</tspan>
-</text>
-</g>
 </g>
 </g>
 <g transform="translate(40, 388)" class="layer-layer1">
@@ -1022,22 +1006,6 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="854" y="99" width="28" height="26" class="combo"/>
 <text x="868" y="112" class="combo tap"><tspan style="font-size: 60%">PRINTSCRE…</tspan></text>
 </g>
-<g class="combo combopos-1">
-<rect rx="6" ry="6" x="266" y="134" width="28" height="26" class="combo"/>
-<use href="#mdi:arrow-right-bold" xlink:href="#mdi:arrow-right-bold" x="271" y="138" height="18" width="18.0" class="combo tap glyph mdi:arrow-right-bold"/>
-</g>
-<g class="combo combopos-2">
-<rect rx="6" ry="6" x="630" y="78" width="28" height="26" class="combo"/>
-<text x="644" y="91" class="combo tap">
-<tspan x="644" dy="-0.6em">PG</tspan><tspan x="644" dy="1.2em">UP</tspan>
-</text>
-</g>
-<g class="combo combopos-3">
-<rect rx="6" ry="6" x="630" y="134" width="28" height="26" class="combo"/>
-<text x="644" y="147" class="combo tap">
-<tspan x="644" dy="-0.6em">PG</tspan><tspan x="644" dy="1.2em">DN</tspan>
-</text>
-</g>
 </g>
 </g>
 <g transform="translate(40, 776)" class="layer-2">
@@ -1383,22 +1351,6 @@ rect.held, rect.combo.held {
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="854" y="99" width="28" height="26" class="combo"/>
 <text x="868" y="112" class="combo tap"><tspan style="font-size: 60%">PRINTSCRE…</tspan></text>
-</g>
-<g class="combo combopos-1">
-<rect rx="6" ry="6" x="266" y="134" width="28" height="26" class="combo"/>
-<use href="#mdi:arrow-right-bold" xlink:href="#mdi:arrow-right-bold" x="271" y="138" height="18" width="18.0" class="combo tap glyph mdi:arrow-right-bold"/>
-</g>
-<g class="combo combopos-2">
-<rect rx="6" ry="6" x="630" y="78" width="28" height="26" class="combo"/>
-<text x="644" y="91" class="combo tap">
-<tspan x="644" dy="-0.6em">PG</tspan><tspan x="644" dy="1.2em">UP</tspan>
-</text>
-</g>
-<g class="combo combopos-3">
-<rect rx="6" ry="6" x="630" y="134" width="28" height="26" class="combo"/>
-<text x="644" y="147" class="combo tap">
-<tspan x="644" dy="-0.6em">PG</tspan><tspan x="644" dy="1.2em">DN</tspan>
-</text>
 </g>
 </g>
 </g>
