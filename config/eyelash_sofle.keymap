@@ -92,7 +92,7 @@
             >;
 
             display-name = "layer1";
-            sensor-bindings = <&new_behavior SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>;
         };
 
         layer_2 {
