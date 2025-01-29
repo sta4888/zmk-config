@@ -24,12 +24,6 @@
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
-&msc {
-    acceleration-exponent = <5>;
-    delay-ms = <0>;
-    trigger-period-ms = <0>;
-};
-
 / {
     behaviors {
         mmv {
@@ -52,6 +46,15 @@
 
         tap-ms = <30>;
         label = "scroll";
+    };
+
+    new_behavior: new_behavior {
+        compatible = "zmk,behavior-sensor-rotate-var";
+        label = "NEW_BEHAVIOR";
+        #sensor-binding-cells = <2>;
+        bindings = <&msc>, <&msc>;
+
+        tap-ms = <5>;
     };
 
     combos {
@@ -104,7 +107,7 @@
             >;
 
             display-name = "layer1";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&new_behavior SCRL_DOWN SCRL_UP>;
         };
 
         layer_2 {
