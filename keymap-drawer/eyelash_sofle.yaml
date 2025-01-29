@@ -95,7 +95,7 @@ layers:
   - '~'
   - $$mdi:mouse-left-click-outline$$
   - '&mkp MB3'
-  - '&mkp MB2'
+  - $$mdi:mouse-right-click-outline$$
   - '&mkp MB5'
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - PG DN
