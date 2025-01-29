@@ -21,7 +21,7 @@
 
  */
 
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
 / {
@@ -41,7 +41,7 @@
 
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
+        sensor-binding-cells = <3>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
         tap-ms = <30>;
@@ -51,7 +51,7 @@
     new_behavior: new_behavior {
         compatible = "zmk,behavior-sensor-rotate-var";
         label = "NEW_BEHAVIOR";
-        #sensor-binding-cells = <2>;
+        #sensor-binding-cells = <3>;
         bindings = <&msc>, <&msc>;
 
         tap-ms = <5>;
