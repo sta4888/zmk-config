@@ -24,6 +24,12 @@
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
+&msc {
+    acceleration-exponent = <5>;
+    delay-ms = <0>;
+    trigger-period-ms = <0>;
+};
+
 / {
     behaviors {
         mmv {
@@ -55,6 +61,21 @@
             bindings = <&kp PRINTSCREEN>;
             key-positions = <24 25>;
         };
+
+        arrow-right {
+            bindings = <&kp RIGHT>;
+            key-positions = <31 30>;
+        };
+
+        pg-UP {
+            bindings = <&kp PG_UP>;
+            key-positions = <20 21>;
+        };
+
+        pg-DOWN {
+            bindings = <&kp PG_DN>;
+            key-positions = <33 34>;
+        };
     };
 
     keymap {
@@ -75,27 +96,27 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE                          &kp F1           &kp F2                             &kp F3                           &kp F4                          &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
-&trans                             &kp GRAVE        &mkp LCLK                          &mkp MCLK                        &mkp RCLK                       &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
-&rgb_ug RGB_COLOR_HSB(119,100,50)  &kp TILDE        &rgb_ug RGB_COLOR_HSB(243,100,50)  &rgb_ug RGB_COLOR_HSB(0,100,50)  &rgb_ug RGB_COLOR_HSB(0,0,100)  &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans                             &rgb_ug RGB_OFF  &rgb_ug RGB_ON                     &rgb_ug RGB_EFF                  &rgb_ug RGB_EFR                 &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &trans
-&kp C_MUTE                         &trans           &trans                             &trans                           &trans                          &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
+&kp GRAVE   &kp F1           &kp F2                           &kp F3                             &kp F4                             &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
+&trans      &kp GRAVE        &rgb_ug RGB_COLOR_HSB(0,100,50)  &rgb_ug RGB_COLOR_HSB(110,100,50)  &rgb_ug RGB_COLOR_HSB(211,100,50)  &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
+&trans      &kp TILDE        &mkp LCLK                        &mkp MB3                           &mkp MB2                           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON                   &rgb_ug RGB_EFF                    &rgb_ug RGB_EFR                    &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &trans
+&kp C_MUTE  &trans           &trans                           &trans                             &trans                             &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
             >;
 
             display-name = "layer1";
-            sensor-bindings = <&inc_dec_kp LS(C_AC_SCROLL_UP) C_AC_SCROLL_DOWN>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         layer_2 {
             bindings = <
 &kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4      &mmv MOVE_UP     &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &trans
-&trans     &trans        &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT    &bt BT_CLR        &mmv MOVE_DOWN   &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
-&trans     &out OUT_USB  &out OUT_BLE  &trans            &trans        &bt BT_CLR_ALL    &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
+&trans     &trans        &out OUT_BLE  &trans            &trans        &bt BT_CLR        &mmv MOVE_DOWN   &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
+&trans     &out OUT_USB  &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT    &bt BT_CLR_ALL    &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
 &trans     &sys_reset    &trans        &bootloader       &trans        &trans            &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
 &trans     &trans        &trans        &trans            &trans        &trans            &mkp LCLK        &trans  &trans  &trans      &trans     &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&scroll_encoder>;
         };
     };
 };
