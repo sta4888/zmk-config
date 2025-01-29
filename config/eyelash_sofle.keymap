@@ -64,21 +64,6 @@
             bindings = <&kp PRINTSCREEN>;
             key-positions = <24 25>;
         };
-
-        arrow-right {
-            bindings = <&kp RIGHT>;
-            key-positions = <31 30>;
-        };
-
-        pg-UP {
-            bindings = <&kp PG_UP>;
-            key-positions = <20 21>;
-        };
-
-        pg-DOWN {
-            bindings = <&kp PG_DN>;
-            key-positions = <33 34>;
-        };
     };
 
     keymap {
