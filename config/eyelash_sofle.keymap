@@ -18,25 +18,43 @@
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
-&msc {
-    acceleration-exponent = <1>;      // 0
-    time-to-max-speed-ms = <40>;       // 300
-    delay-ms = <0>;                   // 0
-    trigger-period-ms = <8>;
-};
 
-&mmv {
-    time-to-max-speed-ms = <500>;
-    acceleration-exponent = <1>;
-};
+
+/*
+
+   &mmv_input_listener {
+       input-processors = <&zip_xy_scaler 2 1>;
+   };
+
+   &msc_input_listener {
+       input-processors = <&zip_xy_scaler 2 1>;
+   };
+
+ */
+
 
 / {
+    behaviors {
+        &msc {
+            acceleration-exponent = <1>;      // 0
+            time-to-max-speed-ms = <40>;       // 300
+            delay-ms = <0>;                   // 0
+            trigger-period-ms = <8>;
+        };
+
+        &mmv {
+            time-to-max-speed-ms = <900>;
+            acceleration-exponent = <1>;
+        };
+    };
+
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
-        tap-ms = <20>;
+        tap-ms = <30>;
+        label = "scroll";
     };
 
     combos {
@@ -46,9 +64,6 @@
             bindings = <&kp PRINTSCREEN>;
             key-positions = <24 25>;
         };
-    };
-
-    behaviors {
     };
 
     keymap {
@@ -68,7 +83,7 @@
         };
 
         layer_1 {
-            bindings = <
+            bindings = <Л
 &kp GRAVE   &kp F1           &kp F2                           &kp F3                             &kp F4                             &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
 &trans      &kp GRAVE        &rgb_ug RGB_COLOR_HSB(0,100,50)  &rgb_ug RGB_COLOR_HSB(110,100,50)  &rgb_ug RGB_COLOR_HSB(211,100,50)  &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
 &trans      &kp TILDE        &mkp MB1                         &mkp MB3                           &mkp MB2                           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
