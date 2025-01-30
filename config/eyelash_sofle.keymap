@@ -1,5 +1,5 @@
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 30    // 10
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // Скорость перемещения мыши
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 30    // Скорость скролла
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -7,8 +7,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -27,24 +25,24 @@
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
 &msc {
-    acceleration-exponent = <1>;      // 0
-    time-to-max-speed-ms = <40>;       // 300
-    delay-ms = <0>;                   // 0
-    trigger-period-ms = <8>;
+    acceleration-exponent = <1>;      // Ускорение скролла
+    time-to-max-speed-ms = <40>;      // Время до достижения максимальной скорости
+    delay-ms = <0>;                   // Задержка перед началом скролла
+    trigger-period-ms = <8>;          // Период срабатывания
 };
 
 &mmv {
-    time-to-max-speed-ms = <500>;
-    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <500>;     // Время до достижения максимальной скорости для перемещения
+    acceleration-exponent = <1>;      // Ускорение для перемещения
 };
 
 / {
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;  // Привязка к скроллу вниз и вверх
 
-        tap-ms = <50>;
+        tap-ms = <50>;  // Время тапа для сенсора
     };
 
     combos {
@@ -85,7 +83,7 @@
             >;
 
             display-name = "layer1";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&scroll_encoder>;  // Привязка сенсора к скроллу
         };
 
         layer_2 {
@@ -97,7 +95,7 @@
 &trans     &trans        &trans        &trans            &trans        &trans            &mkp LCLK        &trans  &trans  &trans      &trans     &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&scroll_encoder>;  // Привязка сенсора к скроллу
         };
     };
 };
