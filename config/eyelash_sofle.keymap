@@ -24,7 +24,12 @@
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
-
+&msc {
+    acceleration-exponent = <1>;      // Ускорение скролла
+    time-to-max-speed-ms = <40>;      // Время до достижения максимальной скорости
+    delay-ms = <0>;                   // Задержка перед началом скролла
+    trigger-period-ms = <8>;          // Период срабатывания
+};
 
 / {
     combos {
@@ -51,7 +56,7 @@
 &kp C_MUTE      &kp CLCK  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp ENTER        &kp SPACE  &mo 2   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DELETE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
             display-name = "LAYER0";
         };
 
