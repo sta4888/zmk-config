@@ -1,4 +1,4 @@
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // Скорость перемещения мыши
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // Скорость перемещения мыши
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 30    // Скорость скролла
 
 #include <input/processors.dtsi>
@@ -32,7 +32,7 @@
 };
 
 &mmv {
-    time-to-max-speed-ms = <500>;     // Время до достижения максимальной скорости для перемещения
+    time-to-max-speed-ms = <700>;     // Время до достижения максимальной скорости для перемещения
     acceleration-exponent = <1>;      // Ускорение для перемещения
 };
 
