@@ -34,28 +34,6 @@
         bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
     };
 
-    new_behavior_repeat: new_behavior_repeat {
-        compatible = "zmk,behavior-key-repeat";
-        label = "NEW_BEHAVIOR_REPEAT";
-        #binding-cells = <0>;
-        usage-pages = 21;
-    };
-
-    new_behavior_2_axis: new_behavior_2_axis {
-        compatible = "zmk,behavior-input-two-axis";
-        label = "NEW_BEHAVIOR_2_AXIS";
-        #binding-cells = <1>;
-        time-to-max-speed-ms = <500>;
-        x-input-code = <10>;
-        y-input-code = <10>;
-    };
-
-    new_behavior_mkp: new_behavior_mkp {
-        compatible = "zmk,behavior-mouse-key-press";
-        label = "NEW_BEHAVIOR_MKP";
-        #binding-cells = <1>;
-    };
-
     combos {
         compatible = "zmk,combos";
 
