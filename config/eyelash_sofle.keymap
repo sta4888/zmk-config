@@ -37,13 +37,12 @@
 };
 
 / {
-    scroll_encoder: scroll_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;  // Привязка к скроллу вниз и вверх
-
-        tap-ms = <50>;  // Время тапа для сенсора
-    };
+    scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            tap-ms = <20>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+        };
 
     combos {
         compatible = "zmk,combos";
@@ -83,7 +82,7 @@
             >;
 
             display-name = "layer1";
-            sensor-bindings = <&scroll_encoder>;  // Привязка сенсора к скроллу
+            sensor-bindings = <&scroll_up_down>;  // Привязка сенсора к скроллу
         };
 
         layer_2 {
@@ -95,7 +94,7 @@
 &trans     &trans        &trans        &trans            &trans        &trans            &mkp LCLK        &trans  &trans  &trans      &trans     &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;  // Привязка сенсора к скроллу
+            sensor-bindings = <&scroll_up_down>;  // Привязка сенсора к скроллу
         };
     };
 };
