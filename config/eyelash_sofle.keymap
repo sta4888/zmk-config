@@ -24,12 +24,7 @@
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
-&msc {
-    acceleration-exponent = <1>;      // Ускорение скролла
-    time-to-max-speed-ms = <40>;      // Время до достижения максимальной скорости
-    delay-ms = <0>;                   // Задержка перед началом скролла
-    trigger-period-ms = <8>;          // Период срабатывания
-};
+
 
 / {
     combos {
