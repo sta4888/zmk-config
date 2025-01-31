@@ -15,7 +15,7 @@
 &msc {
     trigger-period-ms = <10>;
     delay-ms = <10>;
-    acceleration-exponent = <1>;
+    acceleration-exponent = <2>;
 };
 
 / {
@@ -30,7 +30,8 @@
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
-&msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
+&msc_input_listener { input-processors = <&zip_scroll_scaler 3 1>; };  // Увеличиваем множитель
+
 
 / {
     combos {
@@ -79,7 +80,8 @@
             >;
 
             display-name = "layer1";
-            sensor-bindings = <&new_behavior>;  // Привязка сенсора к скроллу
+            sensor-bindings = <&msc SCRL_UP SCRL_DOWN>;
+
         };
 
         layer_2 {
@@ -91,7 +93,8 @@
 &msc SCRL_UP  &trans        &trans        &trans            &trans        &trans            &mkp LCLK        &trans  &trans  &trans      &trans     &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;  // Привязка сенсора к скроллу
+            sensor-bindings = <&msc SCRL_UP SCRL_DOWN>;
+
         };
     };
 };
