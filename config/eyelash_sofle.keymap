@@ -14,11 +14,6 @@
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
-&msc {
-    acceleration-exponent = <1>;
-    delay-ms = <30>;
-};
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -26,17 +21,6 @@
         printScreen {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <24 25>;
-        };
-    };
-
-    behaviors {
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "NEW_BEHAVIOR";
-            #sensor-binding-cells = <0>;
-            bindings = <&kp K_SCROLL_UP>, <&kp K_SCROLL_DOWN>;
-
-            tap-ms = <10>;
         };
     };
 
