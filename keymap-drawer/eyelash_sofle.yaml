@@ -152,9 +152,9 @@ layers:
   - $$mdi:bluetooth-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - PG UP
-  - END
-  - $$mdi:arrow-up-bold$$
   - HOME
+  - $$mdi:arrow-up-bold$$
+  - END
   - _
   - +
   - {t: '$$mdi:transfer$$', type: trans}
